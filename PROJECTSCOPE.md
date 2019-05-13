@@ -7,6 +7,7 @@
   * user can enter a long URL
   * shortened URL is presented to the user
   * anonymous user can only generate one shortened URL at a time
+  * displays number of clicks as metric
 
 
 * Have a working backend:
