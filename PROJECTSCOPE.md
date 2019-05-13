@@ -15,7 +15,7 @@
   * generate shortened URL using a hash
   * save URL to DB
   * reply to frontend with shortened URL
-  * utilizing Rebrandly API for the shortener
+  * utilizing GoQR API http://goqr.me/api/ for the QR Code
 
 ## Stretch Goals
 
