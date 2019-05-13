@@ -1,0 +1,53 @@
+/* 
+This is the main css file.
+CSS in this file will be used across the entire site.
+*/
+
+/****************************
+      FONTS
+*****************************/
+@font-face {
+  font-family: "ember-bold";
+  src: url('/fonts/Amazon_Ember_Bd.ttf');
+}
+
+@font-face {
+  font-family: "ember-reg";
+  src: url('/fonts/Amazon_Ember_Rg.ttf');
+}
+
+@font-face {
+  font-family: "ember-light";
+  src: url('/fonts/Amazon_Ember_Lt.ttf');
+}
+
+/****************************
+      GLOBAL  STYLING
+*****************************/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #F2F4f4;
+}
+
+main {
+  max-width: 1040px;
+  margin: 50px auto;
+}
+
+[class*=" icon-"], [class^=icon-] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+  margin-top: 0;
+}
