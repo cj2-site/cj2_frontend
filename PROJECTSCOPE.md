@@ -6,7 +6,6 @@
 
   * user can enter a long URL
   * shortened URL is presented to the user
-  * user can be authenticated using Google OAuth
   * anonymous user can only generate one shortened URL at a time
 
 
@@ -25,3 +24,4 @@
   * Allow logged in users to view previous generated shortened URLs
   * Allow logged in users to create customized shortened URLs
   * Allow users to share to other social media platforms
+  * User can be authenticated using Google OAuth
