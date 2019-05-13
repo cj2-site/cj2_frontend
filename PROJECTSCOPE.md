@@ -25,4 +25,6 @@
   * Allow logged in users to create customized shortened URLs
   * Allow users to share to other social media platform: Twitter using API
   * User can be authenticated using Google OAuth
+  * Add QR codes to the shortened URL
+  * Add admin page for DB CRUD
   
