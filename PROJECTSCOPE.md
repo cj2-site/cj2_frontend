@@ -15,7 +15,7 @@
   * generate shortened URL using a hash
   * save URL to DB
   * reply to frontend with shortened URL
-  * allow user to log in/log out using Google OAuth API
+  * utilizing Rebrandly API for the shortener
 
 ## Stretch Goals
 
