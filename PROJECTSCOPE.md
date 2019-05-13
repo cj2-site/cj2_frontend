@@ -17,7 +17,7 @@
   * reply to frontend with shortened URL
   * allow user to log in/log out using Google OAuth API
 
-## Stretch Goals:
+## Stretch Goals
 
   * Allow logged in users to save shortened URLs to retrieve later on
   * Allow logged in users to enter in multiple long URLs (separated by commas?)
