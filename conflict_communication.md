@@ -1,4 +1,4 @@
-# Communication Plan
+## Communication Plan
 
 ### Workflow ###
 
