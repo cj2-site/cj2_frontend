@@ -1,5 +1,8 @@
 # CJ2.SITE PROJECT SCOPE
 
+## Task List
+https://trello.com/invite/b/dTVbGhwt/bab275ea874568fe233e32da52845a6b/cj2site
+
 ## MVP
 
 * Have a working frontend:
