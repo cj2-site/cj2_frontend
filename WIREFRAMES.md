@@ -12,4 +12,4 @@
 <object data="https://slack-files.com/T039KG69K-FJN5HNW4Q-d9d7784f39" type="application/pdf" width="700px" height="700px"></object>
 
 ## About
-<object data="https://slack-files.com/T039KG69K-FJFQPM1A5-02492cfaab" type="application/pdf" width="700px" height="700px"></object>
+<img src="https://drive.google.com/open?id=1GNw7HSaopX5NZQ4t6N6nNw_O33PU-F-3" />
