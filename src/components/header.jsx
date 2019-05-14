@@ -1,8 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
-import Faq from './faq.jsx';
-import About from './about.jsx';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
