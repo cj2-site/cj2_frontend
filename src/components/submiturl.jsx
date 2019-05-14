@@ -30,7 +30,7 @@ class SubmitURL extends React.Component {
   render(){
     return (
       <form onSubmit={this.handleSubmit}>
-      <input onChange={this.handleURL} />
+      <input className='longUrlInput' onChange={this.handleURL} />
       <button>Submit</button>
     </form>
     );
