@@ -20,11 +20,15 @@ class SubmitURL extends React.Component {
     e.preventDefault();
     // API call
     /* UNCOMMENT THIS WHEN BACKEND IS DONE AND STUFF */
-    let data = await superagent.get(`${this.props.backendURL}?data=${this.state.url}`);
-    let tinyURL = data.body.short_url;
-    // let tinyURL = 'sdfl.cj2.site';
-    // Update App state
-    this.props.updateTinyURL(`https://cj2.site/${tinyURL}`);
+    if (!/^http(s)?:\/\//.test(this.state.url)) {
+      alert('Please enter a valid URL with https:// or http://');
+    } else {
+      let data = await superagent.get(`${this.props.backendURL}?data=${this.state.url}`);
+      let tinyURL = data.body.short_url;
+      // let tinyURL = 'sdfl.cj2.site';
+      // Update App state
+      this.props.updateTinyURL(`https://cj2.site/${tinyURL}`);
+    }
   };
 
   render(){
