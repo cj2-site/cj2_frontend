@@ -13,6 +13,10 @@ class SubmitURL extends React.Component {
 
   handleURL = e => {
     let url= e.target.value;
+    // Input validation for http or https
+    if (!/^http(s)?:\/\//.test(url)) {
+      url = 'http://' + url;
+    }
     this.setState({ url });
   };
 
