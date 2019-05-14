@@ -27,16 +27,17 @@ class SubmitURL extends React.Component {
       let tinyURL = data.body.short_url;
       // let tinyURL = 'sdfl.cj2.site';
       // Update App state
-      this.props.updateTinyURL(`https://cj2.site/${tinyURL}`);
+      this.props.updateTinyURL(`https://cj2.site/${tinyURL}`, this.state.url);
     }
   };
 
   render(){
     return (
       <form onSubmit={this.handleSubmit}>
-      <input className='longUrlInput' onChange={this.handleURL} />
-      <button>Submit</button>
-    </form>
+        <h2>Paste your link you want to shorten below!</h2>
+        <input className='longUrlInput' onChange={this.handleURL} />
+        <button>Submit</button>
+      </form>
     );
   }
 }
