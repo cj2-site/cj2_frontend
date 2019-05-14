@@ -8,7 +8,7 @@ const Home = (props) => {
       <div>
       {props.tinyURL === '' ?
         <SubmitURL {...props} /> :
-        <OutputURL tinyURL={props.tinyURL}/> }
+        <OutputURL {...props} /> }
       </div>
     </section>
   );

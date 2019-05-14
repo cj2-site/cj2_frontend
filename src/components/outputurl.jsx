@@ -19,9 +19,9 @@ class OutputURL extends React.Component {
   render(){
     return (
       <>
+        <h2>{this.props.tinyURL}</h2>
         <button onClick={this.copyToClipBoard}>Copy URL</button>
-        <p>{this.props.tinyURL}</p>
-        <button>Create another link</button>
+        <button onClick={this.props.clearTinyURL}>Create another link</button>
       </>
     );
   }
