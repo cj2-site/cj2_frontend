@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       tinyURL: '',
-      backendURL: 'https://cj2.herokuapp.com/hello',
+      backendURL: 'https://cj2.herokuapp.com/long-url',
     };
   }
 

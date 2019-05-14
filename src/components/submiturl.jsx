@@ -24,7 +24,7 @@ class SubmitURL extends React.Component {
     let tinyURL = data.body.short_url;
     // let tinyURL = 'sdfl.cj2.site';
     // Update App state
-    this.props.updateTinyURL(`${this.props.backendURL}/${tinyURL}`);
+    this.props.updateTinyURL(`https://cj2.site/${tinyURL}`);
   };
 
   render(){
