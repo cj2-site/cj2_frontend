@@ -31,7 +31,6 @@ class App extends React.Component {
 
   updateLocalStorage = () => {
     // Update local storage
-    console.log('updateLS', this.state.links);
     localStorage.setItem("links", JSON.stringify(this.state.links));
   }
 
@@ -46,7 +45,7 @@ class App extends React.Component {
     // Set state and call function to update storage.
     this.setState({ tinyURL });
     this.setState({ qrCode });
-    if(tinyURL !== '' && tinyURL){
+    if(tinyURL !== '' && tinyURL && !(this.state.links.filter(element => element.tinyURL === tinyURL).length)){
       this.setState(previousState => ({
         links: [...previousState.links, {tinyURL: tinyURL, longURL: longURL, qrCode: qrCode}]
       }));
