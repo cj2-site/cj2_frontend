@@ -21,7 +21,7 @@ class OutputURL extends React.Component {
       <div>
         <section className='output'>
         <div>
-          <img src={this.props.qrCode} />
+          <img src={this.props.qrCode} alt= 'QR Code'/>
           <h2>{this.props.tinyURL}</h2>
         </div>
         <div>
