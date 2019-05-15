@@ -2,17 +2,33 @@ import React from 'react';
 
 const Faq = () => {
   return (
-    <section>
-      <h2>Frequently Asked Questions</h2>
-      <p>Q: How to use?</p>
-      <p>A: Enter your long URL and we give you back a short URL!</p>
-      <p>Q: Can I save my links?</p>
-      <p>A: NO! Not at this time. Ask Michelle</p>
-      <p>Q: Where are my links?</p>
-      <p>A: Click on Links in the Nav bar up top</p>
-      <p>Q: What happens if I lost a link?</p>
-      <p>A: Resubmit it and we will give you the previous shortened URL!</p>
-    </section>
+    <div className='faqs'>
+      <section>
+        <div>
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div>
+          <span>Q: How to use?</span>
+          <br/>
+          <span>A: Enter your long URL and we give you back a short URL!</span>
+        </div>
+        <div>
+          <span>Q: Can I save my links?</span>
+          <br/>
+          <span>A: NO! Not at this time. Ask Michelle</span>
+        </div>
+        <div>
+          <span>Q: Where are my links?</span>
+          <br/>
+          <span>A: Click on Links in the Nav bar up top</span>
+        </div>
+        <div>
+          <span>Q: What happens if I lost a link?</span>
+          <br/>
+          <span>A: Resubmit it and we will give you the previous shortened URL!</span>
+        </div>
+      </section>
+    </div>
   );
 }
 

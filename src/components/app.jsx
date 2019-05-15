@@ -5,6 +5,7 @@ import Home from './home.jsx';
 import Faq from './faq.jsx';
 import About from './about.jsx';
 import Links from './links.jsx';
+import superagent from 'superagent';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,25 +24,28 @@ class App extends React.Component {
     tempLinks ? this.setState({links: tempLinks}) : this.setState({links: []});
   }
 
+  // Update local storage on update of component
+  componentDidUpdate() {
+    this.updateLocalStorage();
+  }
+
   updateLocalStorage = () => {
     // Update local storage
     localStorage.setItem("links", JSON.stringify(this.state.links));
   }
 
   // Not sure if this works
-  delLink = (tinyURL) => {
-    const links = this.state.links.filter((element) => element.tinyURL !== tinyURL);
-    console.log(links);
-    this.setState({links});
-    this.updateLocalStorage();
+  delLink = async (tinyURL) => {
+    // Call superagent to invoke a update / delete & update the links
+    let data = await superagent.put(`${this.state.backendURL.slice(0,26)}${tinyURL.slice(-4)}`)
+    .then(res => this.setState({ links: [...this.state.links.filter(element => element.tinyURL !== tinyURL)] }));
   }
 
   updateTinyURL = (tinyURL, longURL, qrCode) => {
     // Set state and call function to update storage.
     this.setState({ tinyURL });
-    console.log('update tiny', qrCode);
     this.setState({ qrCode });
-    if(tinyURL !== '' && tinyURL){
+    if(tinyURL !== '' && tinyURL && !(this.state.links.filter(element => element.tinyURL === tinyURL).length)){
       this.setState(previousState => ({
         links: [...previousState.links, {tinyURL: tinyURL, longURL: longURL, qrCode: qrCode}]
       }));
