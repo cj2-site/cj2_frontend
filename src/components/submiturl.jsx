@@ -21,8 +21,8 @@ class SubmitURL extends React.Component {
     e.preventDefault();
     // API call
     /* UNCOMMENT THIS WHEN BACKEND IS DONE AND STUFF */
-    if (!/^http(s)?:\/\//.test(this.state.url)) {
-      alert('Please enter a valid URL with https:// or http://');
+    if (!/^http(s)?:\/\//.test(this.state.url) || this.state.url.includes('cjs.site') || this.state.url.includes('cj2s.site')) {
+      alert('Please enter a valid URL\n\nShould contain http:// or https://\n\nShould not contain cj2.site or cj2s.site');
     } else {
       let data = await superagent.get(`${this.props.backendURL}?data=${this.state.url}`);
       let tinyURL = data.body.short_url;

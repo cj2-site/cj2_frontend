@@ -75,7 +75,7 @@ class App extends React.Component {
             <Route path="/links"
               render={(routeProps) => (
                 <Links {...routeProps} {...this.state}
-                delLink={this.delLink}/> 
+                delLink={this.delLink}/>
               )}  />
           </main>
         </Router>
