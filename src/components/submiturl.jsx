@@ -9,6 +9,7 @@ class SubmitURL extends React.Component {
     this.state = {
       url: '',
       qrCode: '',
+      errmsg: ''
     };
   }
 
@@ -17,18 +18,28 @@ class SubmitURL extends React.Component {
     this.setState({ url });
   };
 
-  handleSubmit = async e => {
+  handleSubmit = e => {
+    let errmsg;
     e.preventDefault();
     // API call
     /* UNCOMMENT THIS WHEN BACKEND IS DONE AND STUFF */
-    if (!/^http(s)?:\/\//.test(this.state.url) || this.state.url.includes('cjs.site') || this.state.url.includes('cj2s.site')) {
-      alert('Please enter a valid URL\n\nShould contain http:// or https://\n\nShould not contain cj2.site or cj2s.site');
+    if (!/^http(s)?:\/\//.test(this.state.url) || this.state.url.includes('cj2.site') || this.state.url.includes('cj2s.site')) {
+      errmsg = 'Please enter a valid URL. Should contain http:// or https://. Should not contain cj2.site or cj2s.site';
+      this.setState({ errmsg });
     } else {
-      let data = await superagent.get(`${this.props.backendURL}?data=${this.state.url}`);
-      let tinyURL = data.body.short_url;
-      let qrCode = data.body.qr_code;
-      // Update App state
-      this.props.updateTinyURL(`https://cj2.site/${tinyURL}`, this.state.url, qrCode);
+      superagent.get(`${this.props.backendURL}?data=${this.state.url}`)
+        .then(res => {
+          errmsg = '';
+          this.setState({ errmsg });
+          let tinyURL = res.body.short_url;
+          let qrCode = res.body.qr_code;
+          // Update App state
+          this.props.updateTinyURL(`https://cj2.site/${tinyURL}`, this.state.url, qrCode);
+        })
+        .catch(err => {
+          errmsg = err.response.text;
+          this.setState({ errmsg })
+        });
     }
   };
 
@@ -41,6 +52,7 @@ class SubmitURL extends React.Component {
             <input className='longUrlInput' onChange={this.handleURL} />
             <button>Submit</button>
           </form>
+          <h2>{this.state.errmsg}</h2>
         </section>
       </div>
 
