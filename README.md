@@ -1,73 +1,56 @@
-# cj2_frontend
-Front-end repo
+![alt text](https://github.com/cj2-site/cj2_backend/blob/master/assets/chucknorrismeme.jpg "chuck norris")
+
+# cj2 link shortener - frontend
+> **the** premier site for link shortening and chuck norris jokes!
+
+## table of contents
+* [purpose](#purpose)
+* [summary](#summary)
+* [authors](#authors)
+* [license](#license)
 
 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## purpose:
+> I hate when I need to share a link to a specific part of a website and that link is really long. The backend to the CJ2 site solves this problem by shortening links and redirecting users to the original url when using the shortened link. 
 
-## Available Scripts
+## summary
+1. Navigate to the front end at www.cj2.site.
+2. Paste your link into the input field.
+3. Press the button.
+4. A new field will appear with the shortened link. Press the button to copy it to your clipboard.
+5. Paste the link into the browser's url window.
+6. Press enter.
+7. Enjoy the site!
 
-In the project directory, you can run:
+## authors
+> **Stephen Chu** - *Front End* - [stephenchu530](https://github.com/stephenchu530])
 
-### `npm start`
+> **John Winters** - *Front End* - [thatsjustjohn](https://github.com/thatsjustjohn])
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> **Jorie Fernandez** - *Back End* - [joriefernandez](https://github.com/joriefernandez])
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+> **Charles Clemens** - *Back End* - [CClemensJr](https://github.com/CClemensJr)
 
-### `npm test`
+## license
+> This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+# CJ2 LINK SHORTENER: FRONTEND
+> The premier site for link shortening and Chuck Norris jokes!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## SUMMARY
+> The backend of the CJ2 site receives a url from the front end, shortens it, then returns it to the front end. It also handles the short url functionality by redirecting to the original url
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-The name of the project
+-Names of the team members
+-A description of the project
+-The overall problem domain and how the project solves those problems
+-Semantic versioning, beginning with version 1.0.0 and incremented as changes are made
+A list of any libraries, frameworks, or packages that your application requires in order to properly function
+-Instructions that the user may need to follow in order to get your application up and running on their own computer
+-Clearly defined API endpoints with sample responses
+-Clearly defined database schemas
