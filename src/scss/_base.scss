@@ -26,18 +26,18 @@ CSS in this file will be used across the entire site.
 *****************************/
 
 * {
-  margin: 0;
+  margin: $zero;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  background: #F2F4f4;
+  height: $height_std;
+  background: $bg_color_std;
 }
 
 main {
-  max-width: 1040px;
-  margin: 50px auto;
+  max-width: $max_width;
+  margin: $margin_std;
 }
 
 [class*=" icon-"], [class^=icon-] {
@@ -47,12 +47,12 @@ main {
   line-height: normal;
   vertical-align: baseline;
   background-image: none;
-  background-position: 0 0;
+  background-position: $zero $zero;
   background-repeat: repeat;
-  margin-top: 0;
+  margin-top: $zero;
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: $white;
 }
