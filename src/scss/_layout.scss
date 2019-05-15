@@ -4,13 +4,13 @@
 
 .primary-nav {
   background-color: #232f3e;
-  height: 100px;
+  height: $header_height;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .primary-nav h1 {
-  color: white;
+  color: $white;
   float: left;
   font-family: "ember-bold", Helvetica, Arial, sans-serif;
   font-size: 34px;
@@ -18,8 +18,8 @@
 
 nav {
   width: 90%;
-  height: 100px;
-  margin: 0 auto;
+  height: $header_height;
+  margin: $zero auto;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -29,16 +29,16 @@ nav {
 .primary-nav li {
   display: inline-block;
   font-family: "ember-reg", Helvetica, Arial, sans-serif;
-  margin: 0 20px;
+  margin: $zero 20px;
 }
 
 .primary-nav a {
   text-decoration: none;
-  color: white;
+  color: $white;
 }
 
 .primary-nav a:hover {
-  color: #f8991d;
+  color: $orange;
 }
 
 /* secondary nav & contents */
@@ -93,7 +93,7 @@ button{
   text-align: right;
   background-color: #232f3e;
   border-radius: 5px;
-  color: white;
+  color: $white;
   font-size: 15px;
   padding: 10px 30px;
   cursor: pointer;
@@ -101,7 +101,7 @@ button{
 }
 
 button:hover{
-  background-color:  #f8991d;
+  background-color: $orange;
 }
 
 a:hover{
@@ -113,10 +113,5 @@ a:hover{
 *****************************/
 
 @media screen and (min-width: 768px) {
-  .grid-container{
-    
-    width: 960px;
-    height: 700px;
-   
-  }
+  
 }
