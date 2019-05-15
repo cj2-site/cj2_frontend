@@ -10,9 +10,11 @@ class Links extends React.Component {
       <LinkItem key={index} {...link} delLink={this.props.delLink} />
     ));
     return (
-      <section>
-      {renderedContent}
-      </section>
+      <div>
+        <section>
+          {renderedContent}
+        </section>
+      </div>
     )
   }
 }

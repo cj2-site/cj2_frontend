@@ -1,3 +1,26 @@
 .longUrlInput {
   height: 35px;
 }
+
+.item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.faqs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100;
+}
+
+.itemButtons button {
+  background-color: #ff0000;
+  margin:0 auto;
+  display:block;
+  padding: 5px 9px;
+  cursor: pointer;
+}
