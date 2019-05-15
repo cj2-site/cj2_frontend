@@ -11,6 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       tinyURL: '',
+      qrcode: '',
       backendURL: 'https://cj2.herokuapp.com/long-url',
       links: []
     };
@@ -35,12 +36,14 @@ class App extends React.Component {
     this.updateLocalStorage();
   }
 
-  updateTinyURL = (tinyURL, longURL) => {
+  updateTinyURL = (tinyURL, longURL, qrCode) => {
     // Set state and call function to update storage.
     this.setState({ tinyURL });
+    console.log('update tiny', qrCode);
+    this.setState({ qrCode });
     if(tinyURL !== '' && tinyURL){
       this.setState(previousState => ({
-        links: [...previousState.links, {tinyURL: tinyURL, longURL: longURL}]
+        links: [...previousState.links, {tinyURL: tinyURL, longURL: longURL, qrCode: qrCode}]
       }));
       this.updateLocalStorage();
     }
@@ -48,6 +51,7 @@ class App extends React.Component {
 
   clearTinyURL = () => {
     this.setState({ tinyURL: '' });
+    this.setState({ qrCode: '' });
   }
 
   render() {

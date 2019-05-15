@@ -8,6 +8,7 @@ class SubmitURL extends React.Component {
 
     this.state = {
       url: '',
+      qrCode: '',
     };
   }
 
@@ -25,9 +26,9 @@ class SubmitURL extends React.Component {
     } else {
       let data = await superagent.get(`${this.props.backendURL}?data=${this.state.url}`);
       let tinyURL = data.body.short_url;
-      // let tinyURL = 'sdfl.cj2.site';
+      let qrCode = data.body.qr_code;
       // Update App state
-      this.props.updateTinyURL(`https://cj2.site/${tinyURL}`, this.state.url);
+      this.props.updateTinyURL(`https://cj2.site/${tinyURL}`, this.state.url, qrCode);
     }
   };
 
