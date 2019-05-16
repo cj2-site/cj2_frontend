@@ -60,16 +60,17 @@ class SubmitURL extends React.Component {
   render(){
     return (
       <div className="submiturl">
-        <section>
+        <div>
+          <h2>Paste your link you want to shorten below!</h2>
+        </div>
           <form onSubmit={this.handleSubmit}>
-            <h2>Paste your link you want to shorten below!</h2>
             <input className='longUrlInput' onChange={this.handleURL} />
             <button>Submit</button>
           </form>
+        <div>
           <h2><span style={{ color: 'red' }}>{this.state.errmsg}</span></h2>
-        </section>
+        </div>
       </div>
-
     );
   }
 }

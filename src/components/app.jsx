@@ -42,7 +42,7 @@ class App extends React.Component {
     }
     // Call superagent to invoke a update / delete & update the links
     await superagent.put(`${this.state.backendURL.slice(0,26)}${tinyURL.slice(-4)}`)
-    .then(res => this.setState({ links: [...this.state.links.filter(element => element.tinyURL !== tinyURL)] }));
+    .end((err,res) => this.setState({ links: [...this.state.links.filter(element => element.tinyURL !== tinyURL)] }))
   }
 
   updateTinyURL = (tinyURL, longURL, qrCode) => {
