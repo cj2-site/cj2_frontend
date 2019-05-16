@@ -2,14 +2,6 @@
     Generic
 *****************************/
 
-div {
-  div {
-    width: 70%;
-    margin: 50px auto;
-  }
-}
-
-
 /****************************
       Header
 *****************************/
@@ -74,6 +66,41 @@ nav {
       Home
 *****************************/
 
+.home {
+  
+  div {
+    margin: 50px auto;
+  }
+}
+
+.submiturl {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
+.outputurl {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+
 
 /****************************
       Faq
@@ -87,7 +114,7 @@ nav {
 .aboutMe {
 
   div {
-    width: 100%;
+    width: 70%;
     margin: 50px auto;
   }
   
@@ -119,6 +146,17 @@ nav {
 /****************************
       Links
 *****************************/
+
+.links {
+
+  div {
+    width: 70%;
+    margin: 50px auto;
+  }
+
+  font-size: 16px;
+  margin: 10px 0px;
+}
 
 /****************************
     media queries 
