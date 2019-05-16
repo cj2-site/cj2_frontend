@@ -15,7 +15,7 @@ const Faq = () => {
         <div>
           <span>Q: Can I save my links?</span>
           <br/>
-          <span>A: NO! Not at this time. Ask Michelle</span>
+          <span>A: Yes! The links you made are automatically saved locally to your browser</span>
         </div>
         <div>
           <span>Q: Where are my links?</span>
