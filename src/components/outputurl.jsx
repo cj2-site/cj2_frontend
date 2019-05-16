@@ -33,7 +33,7 @@ class OutputURL extends React.Component {
 
   render(){
     return (
-      <div className='output'>
+      <div className='outputurl'>
         <section>
           <div>
             <img src={this.props.qrCode} alt= 'QR Code'/>

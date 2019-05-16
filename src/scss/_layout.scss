@@ -1,5 +1,9 @@
 /****************************
-      HEADER  STYLING
+    Generic
+*****************************/
+
+/****************************
+      Header
 *****************************/
 
 .primary-nav {
@@ -58,19 +62,61 @@ nav {
   color: #aab7b8;
   font-size: 22px;
 }
-
-
 /****************************
-      about
+      Home
 *****************************/
-div {
+
+.home {
   
-  div{
-    width: 70%;
+  div {
     margin: 50px auto;
   }
 }
+
+.submiturl {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+
+.outputurl {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  h2 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+
+
+/****************************
+      Faq
+*****************************/
+
+
+/****************************
+      About
+*****************************/
+
 .aboutMe {
+
+  div {
+    width: 70%;
+    margin: 50px auto;
+  }
   
   section img{
     float: left;
@@ -97,6 +143,20 @@ div {
   }
 }
 
+/****************************
+      Links
+*****************************/
+
+.links {
+
+  div {
+    width: 70%;
+    margin: 50px auto;
+  }
+
+  font-size: 16px;
+  margin: 10px 0px;
+}
 
 /****************************
     media queries 

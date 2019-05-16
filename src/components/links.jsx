@@ -8,7 +8,7 @@ class Links extends React.Component {
       <LinkItem key={index} {...link} delLink={this.props.delLink} />
     ));
     return (
-      <div>
+      <div className='links'>
         <section>
           {renderedContent}
         </section>

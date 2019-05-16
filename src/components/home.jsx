@@ -4,13 +4,13 @@ import OutputURL from './outputurl.jsx';
 
 const Home = (props) => {
   return (
-    <section>
-      <div>
+    <div className='home'>
+      <div >
       {props.tinyURL === '' ?
         <SubmitURL {...props} /> :
         <OutputURL {...props} /> }
       </div>
-    </section>
+    </div>
   );
 }
 
