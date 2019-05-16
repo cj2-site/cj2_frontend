@@ -12,7 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       tinyURL: '',
-      qrcode: '',
+      qrCode: '',
       backendURL: 'https://cj2.herokuapp.com/long-url',
       links: []
     };
