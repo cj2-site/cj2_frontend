@@ -56,3 +56,18 @@ a {
   text-decoration: none;
   color: $white;
 }
+
+button{
+  text-align: right;
+  background-color: #232f3e;
+  border-radius: 5px;
+  color: $white;
+  font-size: 15px;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: 350ms;
+}
+
+button:hover{
+  background-color: $orange;
+}
