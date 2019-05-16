@@ -50,5 +50,10 @@
   display:block;
   padding: 5px 9px;
   cursor: pointer;
+  width: 100px;
+  text-align: center;
 }
 
+button.linkCopy {
+  background-color: #32CD32;
+}
