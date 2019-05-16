@@ -37,7 +37,7 @@ class App extends React.Component {
   // Not sure if this works
   delLink = async (tinyURL) => {
     // Call superagent to invoke a update / delete & update the links
-    let data = await superagent.put(`${this.state.backendURL.slice(0,26)}${tinyURL.slice(-4)}`)
+    await superagent.put(`${this.state.backendURL.slice(0,26)}${tinyURL.slice(-4)}`)
     .then(res => this.setState({ links: [...this.state.links.filter(element => element.tinyURL !== tinyURL)] }));
   }
 
