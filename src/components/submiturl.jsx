@@ -59,7 +59,7 @@ class SubmitURL extends React.Component {
 
   render(){
     return (
-      <div>
+      <div className="submiturl">
         <section>
           <form onSubmit={this.handleSubmit}>
             <h2>Paste your link you want to shorten below!</h2>

@@ -34,8 +34,12 @@ class App extends React.Component {
     localStorage.setItem("links", JSON.stringify(this.state.links));
   }
 
-  // Not sure if this works
+  // Delete function to remove links
   delLink = async (tinyURL) => {
+    // If you delete the link you just made, remove it from the state
+    if(tinyURL === this.state.tinyURL){
+      this.clearTinyURL();
+    }
     // Call superagent to invoke a update / delete & update the links
     await superagent.put(`${this.state.backendURL.slice(0,26)}${tinyURL.slice(-4)}`)
     .then(res => this.setState({ links: [...this.state.links.filter(element => element.tinyURL !== tinyURL)] }));

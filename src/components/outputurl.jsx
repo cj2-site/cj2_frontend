@@ -33,16 +33,16 @@ class OutputURL extends React.Component {
 
   render(){
     return (
-      <div>
-        <section className='output'>
-        <div>
-          <img src={this.props.qrCode} alt= 'QR Code'/>
-          <h2>{this.props.tinyURL}<If condition={this.state.copied}><span style={{ color: '#32CD32' }}> Copied!</span></If></h2>
-        </div>
-        <div>
-          <button onClick={this.copyToClipBoard}>Copy URL</button>
-          <button onClick={this.props.clearTinyURL}>Create another link</button>
-        </div>
+      <div className='output'>
+        <section>
+          <div>
+            <img src={this.props.qrCode} alt= 'QR Code'/>
+            <h2>{this.props.tinyURL}<If condition={this.state.copied}><span style={{ color: '#32CD32' }}> Copied!</span></If></h2>
+          </div>
+          <div>
+            <button onClick={this.copyToClipBoard}>Copy URL</button>
+            <button onClick={this.props.clearTinyURL}>Create another link</button>
+          </div>
         </section>
       </div>
     );

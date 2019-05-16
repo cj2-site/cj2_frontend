@@ -6,7 +6,7 @@ import stephen from '../img/stephen.jpg';
 
 const About = () => {
   return (
-    <>
+    <div className="aboutMe">
       <div>
         <section>
           <img src={jori} alt="Jori" title="Jori" />
@@ -46,7 +46,7 @@ const About = () => {
           <button><a href="https://www.linkedin.com/in/stephenchu530/" target="">LinkedIn</a></button>
         </section>
       </div>
-    </>
+    </div>
   );
 }
 
