@@ -1,5 +1,12 @@
 .longUrlInput {
   height: 35px;
+  width: 250px;
+}
+
+.longUrlInput:hover {
+  height: 37px;
+  border-radius: 10px;
+  border: 2px solid $orange;
 }
 
 .item {
