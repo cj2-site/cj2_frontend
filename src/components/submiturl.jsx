@@ -27,19 +27,26 @@ class SubmitURL extends React.Component {
       errmsg = 'Please enter a valid URL. Should contain http:// or https://. Should not contain cj2.site or cj2s.site';
       this.setState({ errmsg });
     } else {
-      superagent.get(`${this.props.backendURL}?data=${this.state.url}`)
-        .then(res => {
-          errmsg = '';
-          this.setState({ errmsg });
-          let tinyURL = res.body.short_url;
-          let qrCode = res.body.qr_code;
-          // Update App state
-          this.props.updateTinyURL(`https://cj2.site/${tinyURL}`, this.state.url, qrCode);
-        })
-        .catch(err => {
-          errmsg = err.response.text;
-          this.setState({ errmsg })
-        });
+      // Check if the item already exists before attempting to create a new one
+      let objectExisted = this.props.links.filter((element) => element.longURL === this.state.url);
+      if(!objectExisted.length){
+        superagent.get(`${this.props.backendURL}?data=${this.state.url}`)
+          .then(res => {
+            errmsg = '';
+            this.setState({ errmsg });
+            let tinyURL = res.body.short_url;
+            let qrCode = res.body.qr_code;
+            // Update App state
+            this.props.updateTinyURL(`https://cj2.site/${tinyURL}`, this.state.url, qrCode);
+          })
+          .catch(err => {
+            errmsg = err.response.text;
+            this.setState({ errmsg })
+          });
+      }else{
+        // If they try to request a new URL of one they have saved already
+        this.props.updateTinyURL(objectExisted[0].tinyURL, objectExisted[0].longURL, objectExisted[0].qrCode);
+      }
     }
   };
 
