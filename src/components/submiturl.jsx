@@ -13,6 +13,13 @@ class SubmitURL extends React.Component {
     };
   }
 
+  displayErrMsg = (errmsg) => {
+    this.setState({ errmsg });
+    this.timer = setTimeout(_ => {
+      this.setState({ errmsg: '' });
+    }, 3000);
+  }
+
   handleURL = e => {
     let url= e.target.value;
     this.setState({ url });
@@ -25,7 +32,7 @@ class SubmitURL extends React.Component {
     /* UNCOMMENT THIS WHEN BACKEND IS DONE AND STUFF */
     if (!/^http(s)?:\/\//.test(this.state.url) || this.state.url.includes('cj2.site') || this.state.url.includes('cj2s.site')) {
       errmsg = 'Please enter a valid URL. Should contain http:// or https://. Should not contain cj2.site or cj2s.site';
-      this.setState({ errmsg });
+      this.displayErrMsg(errmsg);
     } else {
       // Check if the item already exists before attempting to create a new one
       let objectExisted = this.props.links.filter((element) => element.longURL === this.state.url);
@@ -41,7 +48,7 @@ class SubmitURL extends React.Component {
           })
           .catch(err => {
             errmsg = err.response.text;
-            this.setState({ errmsg })
+            this.displayErrMsg(errmsg);
           });
       }else{
         // If they try to request a new URL of one they have saved already
@@ -59,7 +66,7 @@ class SubmitURL extends React.Component {
             <input className='longUrlInput' onChange={this.handleURL} />
             <button>Submit</button>
           </form>
-          <h2>{this.state.errmsg}</h2>
+          <h2><span style={{ color: 'red' }}>{this.state.errmsg}</span></h2>
         </section>
       </div>
 

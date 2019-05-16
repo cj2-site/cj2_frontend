@@ -1,9 +1,24 @@
 import React from 'react';
 
 
+const If = props => {
+  return props.condition ? props.children : null;
+}
+
 class OutputURL extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      copied: false
+    }
+  }
+
+  copiedAnimation = () => {
+    this.setState({ copied: true });
+    this.timer = setTimeout(_ => {
+      this.setState({copied: false});
+    }, 2000);
   }
 
   copyToClipBoard = () => {
@@ -13,7 +28,7 @@ class OutputURL extends React.Component {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    alert("Copied the text: " + this.props.tinyURL);
+    this.copiedAnimation();
   }
 
   render(){
@@ -22,7 +37,7 @@ class OutputURL extends React.Component {
         <section className='output'>
         <div>
           <img src={this.props.qrCode} alt= 'QR Code'/>
-          <h2>{this.props.tinyURL}</h2>
+          <h2>{this.props.tinyURL}<If condition={this.state.copied}><span style={{ color: '#32CD32' }}> Copied!</span></If></h2>
         </div>
         <div>
           <button onClick={this.copyToClipBoard}>Copy URL</button>
