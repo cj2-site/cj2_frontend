@@ -42,14 +42,11 @@ main {
 
 [class*=" icon-"], [class^=icon-] {
   display: inline;
-  width: auto;
-  height: auto;
   line-height: normal;
   vertical-align: baseline;
   background-image: none;
   background-position: $zero $zero;
   background-repeat: repeat;
-  margin-top: $zero;
 }
 
 a {
