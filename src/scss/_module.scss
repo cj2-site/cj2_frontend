@@ -31,12 +31,6 @@
     width: 100%;
   }
 
-  span {
-    border: 1px solid blue;
-    flex: auto;
-    width: 100%;
-  }
-
   div:nth-of-type(1) {
     margin-top: 0.5vh;
 
@@ -46,13 +40,34 @@
     }
   }
 
-  div {
-    background: #ff0000;
-    
+  span {
+    flex: auto;
+    font-size: 3vh;
+    padding: 1em;
+    width: 100%;
+  }
+
+  div:nth-of-type(2), div:nth-of-type(4) {
     span:nth-of-type(1) {
-      background: white;
-      
-      padding: 1em;
+      background-color: #232f3e;
+      color: $bg_color_std;
+    }
+
+    span:nth-of-type(2) {
+      border: 1px solid #232f3e;
+      color: #232f3e;
+    }
+  }
+
+  div:nth-of-type(3), div:nth-of-type(5) {
+    span:nth-of-type(2) {
+      background-color: #232f3e;
+      color: $bg_color_std;
+    }
+
+    span:nth-of-type(1) {
+      border: 1px solid #232f3e;
+      color: #232f3e;
     }
   }
 }
